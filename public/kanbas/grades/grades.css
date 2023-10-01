@@ -1,0 +1,174 @@
+.list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    font-size: 14px;
+  }
+  
+  .list-group-courses {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-bottom: 10px;
+    border-radius: 0;
+    font-size: 14px;
+    padding-top: 0px;
+    left: 100px;
+    list-style-type: none;
+  }
+
+
+  
+  .list-group-modules {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-bottom: 10px;
+    border-radius: 0;
+    font-size: 14px;
+    width: 100%;
+    left: 250px;
+    list-style-type: none;
+    max-width: 50px;
+  }
+  
+  
+  .list-group-item-secondary {
+    position: relative;
+    display: flex;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+  }
+  
+  .list-group-item-module {
+    position: relative;
+    display: flex;
+    text-indent: 20px;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+  }
+  
+  .list-group-item-module-title {
+    position: relative;
+    display: flex;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+  }
+  
+  .list-group-item-module-action {
+    width: 80px;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    border-top: 20px;
+  }
+  
+  .list-group-item-module.active {
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    background-color: white;
+    border-top: 20px;
+  }
+  
+  .list-group-item-module.active a {
+    color: red;
+  }
+  
+  .courses a {
+    width: 200 px;
+    left: 95px;
+    color: red;
+    text-decoration: none;
+  }
+  
+  .list-group-item {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0.6rem 0.6rem;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 0;
+  }
+  
+  .list-group-item-course {
+    position: relative;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    padding: 0.6rem 0.6rem;
+    color: white;
+    text-decoration: none;
+    background-color: white;
+    border: 0;
+    width: 200px;
+  }
+  
+  .list-group-item-action {
+    width: 80px;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+  }
+  
+  .list-group-item-action-course a {
+    width: 80px;
+    color: red;
+    text-decoration: none;
+    justify-content: center;
+  }
+  
+  .list-group-item-action:hover {
+    background-color: white;
+    color: red;
+  }
+  
+  .list-group-item-action-course {
+    width: 120px;
+    color: white;
+    text-decoration: none;
+    justify-content: left;
+  }
+  
+  .list-group-item-action-course:hover a {
+    background-color: white;
+    color: black;
+    border-left: 3px solid black;
+    padding: 8px;
+  }
+  
+  .list-group-item.active {
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    background-color: white;
+  }
+  
+  .list-group-item.active a {
+    color: red;
+  }
+  
+  .list-group-item-course.active {
+    text-align: left;
+    justify-content: left;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-left: 3px solid black;
+    padding: 8px;
+  }
+  

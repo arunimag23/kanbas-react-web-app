@@ -1,10 +1,406 @@
-<table border = "0" width = "100%">
+
+<html>
+    <head>
+        <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+        <link href="grades.css" rel="stylesheet" />
+        <script src="../../vendors/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+<body>
+    <div class = "row">
+        <div class = "col-1">
+            <div class="list-group">
+            <img class = "list-group-item list-group-item-action"
+                src="/images/NortheasternLogo.png"/> 
+            <div class="list-group-item list-group-item-action">
+            <a href= "/kanbas/account/account.html" class="list-group-item-action">
+            <i class= "fa fa-user fa-2x" style="color: gray;"></i> </br> Account </a>
+            </div>
+            <div class="list-group-item list-group-item-action">
+            <a href="/kanbas/dashboard/dashboard.html" class="list-group-item-action"> 
+            <i class="fa fa-tachometer-alt fa-2x" style="color: #ff0000;"></i> Dashboard</a>
+            </div>
+            <div class="list-group-item list-group-item-action active">
+            <a href="/kanbas/courses/courses.html" class="list-group-item-action">
+            <i class="fa fa-book fa-2x" style="color: #ff0000;"></i> Courses</a>
+            </div>
+            <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action"> 
+            <i class="fa fa-calendar-alt fa-2x" style="color: #ff0000;"></i>
+            Calendar</a>
+            </div>
+            <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action"> 
+            <i class="fa fa-envelope-open-text fa-2x" style="color: #ff0000;"></i>Inbox</a>
+            </div>
+            <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action">
+            <i class="fa fa-clock fa-2x" style="color: #ff0000;"></i>History
+            </a>
+            </div>
+            <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action">
+            <i class="fa fa-tv fa-2x" style="color: #ff0000;"></i>Studio</a>
+            </div>
+            <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action"> 
+            <i class="fa fa-arrow-circle-right fa-2x" style="color: #ff0000;"></i>Commons</a>
+            </div>
+            <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action">
+            <i class="fa fa-question-circle fa-2x" style="color: #ff0000;"></i> </br> Help</a>
+            </div>
+        </div>
+    </div>
+
+    <div class = "col-10">
+        <div class ="row">
+            <div class = "col-12" style="padding-top: 10px;">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb"><i class="fa fa-bars fa-2x" style="color: #ff0000;"></i>
+                  <li class="breadcrumb-item" style="padding-left: 15px;"><a href="/kanbas/home/home.html" style="text-decoration: none; color: red;"> CS4550.12631.202410</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                </ol>
+            </nav>
+            <hr/>
+        </div>
+
+        <div class = "row">
+            <div class = "col-12">
+            <h5 class= "float-end"> <button type="button" class="btn btn-light" style="margin-left: 10px;"><i class="fas fa-cog" style="color: #666666;"></i></button></h5>
+            <h5 class= "float-end"> 
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+                        <i class="fas fa-file-export" style="color: #5e5e5e;"></i>
+                      Export
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+            </h5>
+            <h5 class= "float-end"> <button type="button" class="btn btn-light"><i class="fas fa-file-import" style="color: #666666;"></i>Import</button></h5>
+        </div>
+        </div>
+
+        <div class = "row">
+           <div class = "col-2">
+            <div class="list-group-courses">
+                <li class = "list-group-item-action-course list-group-item-course course"><a href= "/kanbas/home/home.html"> Home </a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Modules</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Piazza</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Zoom Meetings</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="/kanbas/assignments/index.html"> Assignments</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Quizzes </a></li>
+                <li class = "list-group-item-action-course list-group-item-course course active"><a href="#"> Grades </a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> People </a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Panopto Video</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Discussions</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Announcements</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Pages</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Files</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Rubrics</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Outcomes</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Collaborations</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Syllabus</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Progress Reports (EAB Navigate)</a></li>
+                <li class = "list-group-item-action-course list-group-item-course course"><a href="#"> Settings</a></li>
+            </div>
+          </div>
+
+        
+          <div class = "col-10">
+            <div class="row">
+                <div class = "col">
+                <h5>Student Names</h5>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Students">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                  </div>
+                </div>
+                <div class = "col">
+                    <h5>Assignment Names</h5>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search Assignments">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 10px;">
+                <div class = "col-sm-10">
+                <button type="button" class="btn btn-light"><i class="fas fa-filter" style="color: #535455;"></i>Apply Filters</button> 
+                </div>               
+            </div>
+
+            <div class ="row" style="padding-top: 10px;">
+                <div class = "table-responsive">
+                <table class="table table-striped text-center">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Student Name</th>
+                            <td>A1 SETUP </br>Out of 100</td>
+                            <td>A2 HTML </br>Out of 100</td>
+                            <td>A3 CSS </br>Out of 100</td>
+                            <td>A4 BOOTSTRAP </br>Out of 100</td>
+                          </tr>
+                      <tr>
+                        <td style="color: #ff0000; text-align: left;">Mary Rose</td>
+                        <td class="col-12 col-sm-6 col-md-3">100%</td>
+                        <td class="col-12 col-sm-6 col-md-3">90%</td>
+                        <td class="col-12 col-sm-6 col-md-3">80%</td>
+                        <td class="col-12 col-sm-6 col-md-3">95%</td>
+                      </tr>
+                      <tr>
+                        <td style="color: #ff0000; text-align: left;">Arunima Gupta</td>
+                        <td class="col-12 col-sm-6 col-md-3">100%</td>
+                        <td class="col-12 col-sm-6 col-md-3">100%</td>
+                        <td class="col-12 col-sm-6 col-md-3">85%</td>
+                        <td class="col-12 col-sm-6 col-md-3">95%</td>
+                      </tr>
+                      <tr>
+                        <td style="color: #ff0000; text-align: left;">Ben Matthews</td>
+                        <td class="col-12 col-sm-6 col-md-3">85%</td>
+                        <td class="col-12 col-sm-6 col-md-3">99%</td>
+                        <td class="col-12 col-sm-6 col-md-3">80%</td>
+                        <td class="col-12 col-sm-6 col-md-3">100%</td>
+                      </tr>
+                      <tr>
+                        <td style="color: #ff0000; text-align: left;">Jaren Weber</td>
+                        <td class="col-12 col-sm-6 col-md-3">95%</td>
+                        <td class="col-12 col-sm-6 col-md-3">88%</td>
+                        <td class="col-md-2"> <input type="text"
+                            class="form-control"
+                            id="input1"
+                            placeholder="92%"
+                            style="text-align: center;">
+                        </td>
+                        <td class="col-12 col-sm-6 col-md-3">98%</td>
+                      </tr>
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+            
+
+    </div>
+    </div>
+
+     
+            
+</body>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <table border = "0" width = "100%">
     <tbody>
         <tr>
             <td valign = "top">
                 <ul>
                     <li> <a href="/kanbas/account/account.html" > Account </a></li>
                     <li> <a href="#" > Dashboard </a></li>
+                    <li> <a href="kanbas/courses/courses.html" > Courses </a></li>
+                    <li> <a href="#" > Calendar </a></li>
+                    <li> <a href="#" > Inbox </a></li>
+                    <li> <a href="#" > History </a></li>
+                    <li> <a href="#" > Studio </a></li>
+                    <li> <a href="#" > Commons </a></li>
+                    <li> <a href="#" > Help </a></li>
+                </ul>
+             </td>
+             <td valign = "top">
+                <ul>
+                    <li> <a href="/kanbas/home/home.html" > Home </a></li>
+                    <li> <a href="#" > Modules </a></li>
+                    <li> <a href="#" > Piazza </a></li>
+                    <li> <a href="#" > Zoom Meetings </a></li>
+                    <li> <a href="/kanbas/assignments/index.html" > Assignments </a></li>
+                    <li> <a href="#" > Quizzes </a></li>
+                    <li> <a href="/kanbas/grades/grades.html" > Grades </a></li>
+                    <li> <a href="#" > People </a></li>
+                    <li> <a href="#" > Panopto Video </a></li>
+                    <li> <a href="#" > Discussions </a></li>
+                    <li> <a href="#" > Announcements </a></li>
+                    <li> <a href="#" > Pages </a></li>
+                    <li> <a href="#" > Files </a></li>
+                    <li> <a href="#" > Rubrics </a></li>
+                    <li> <a href="#" > Outcomes </a></li>
+                    <li> <a href="#" > Collaborations </a></li>
+                    <li> <a href="#" > Syllabus </a></li>
+                    <li> <a href="#" > Settings </a></li>
+                </ul>
+             </td>
+             <td>
+                <select>
+                    <option value = "speed-grader" selected> SpeedGrader </option>
+                        <option> Edit </option>
+                        <option> Duplicate </option>
+                        <option> Delete </option>
+                        <option> Move To... </option>
+                        <option> Send To... </option>
+                        <option> Copy To... </option>
+                        <option> Share to Commons </option>
+                </select>
+                <h3> Assignment Name </h3>
+                <input type = "text"
+                       id = "assignment-name"
+                       placeholder="A1 - ENV + HTML"
+                       value="A1 - ENV + HTML">
+            </br>
+            </br>
+                <textarea cols = "30"
+                          rows = "10"
+                          placeholder="This is the assignment description">
+                </textarea>
+            </br>
+            </br>
+                <label> Points </label>
+            </br>
+            </br>
+                <input type = "number"
+                       value = "100"
+                       max = "100"
+                       name = "points"
+                       id = "points">
+            </br>
+            </br>
+            <label> Assignment Group</label>
+            </br>
+            <select> 
+                <option value = "assingments" selected> ASSIGNMENTS </option>
+            </select>
+            </br>
+            </br>
+            <label> Display Guide as </label>
+            </br>
+            <select> 
+                <option value = "percentage" selected> Percentage </option>
+            </select>
+            </br>
+            </br>
+            <label> Submission Type</label>
+            </br>
+            <select> 
+                <option value = "online" selected> Online </option>
+            </select>
+            </br>
+            </br> 
+            <label> Online Entry Options</label>
+            </br> 
+            <input type="checkbox" value="Text Entry"
+            name="check-entry" id="chkbox-entry" />
+            <label for="chkbox-entry">Text Entry</label>    <br/>
+            <input type="checkbox" value="web-url"
+            name="check-web" id="chkbox-web"/>
+            <label for="chkbox-web">Website URL</label>    <br/>
+            <input type="checkbox" value="Media Recordings"
+            name="check-media" id="chkbox-media" />
+            <label for="chkbox-media">Media Recordings</label> <br/>
+            <input type="checkbox" value="Student Annotation"
+            name="check-annotation" id="chkbox-annotation"/>
+            <label for="chkbox-annotation">Student Annotation</label> </br>
+            <input type="checkbox" value="File Uploads"
+            name="check-file" id="chkbox-file"/>
+            <label for="chkbox-file">File Uploads</label>
+            </br>
+            </br>
+            <label> Submission Attempts</label>
+            </br>
+            <select> 
+                <option value = "unlimited" selected> Unlimited </option>
+            </select>
+            </br>
+            </br>
+            <label> Plagiarism Review </label>
+            </br>
+            <select> 
+                <option value = "none" selected> None </option>
+            </select>
+            </br>
+            </br>
+            <label> Group Assignment </label> 
+            </br>
+            <input type="checkbox" value="group-assign"
+            name="check-group" id="chkbox-group" />
+            <label for="chkbox-group">This is a group assignment</label>    <br/>
+            </br>
+            <label> Peer Reviews </label> 
+        </br>
+            <input type="checkbox" value="peer-review"
+            name="check-peer" id="chkbox-peer" />
+            <label for="chkbox-peer">Require Peer Review</label>    <br/>
+        </br>
+            <label> Assign to </label> </br>
+            <input type = "text"
+                   value = "Everyone"
+                   name = "everyone"
+                   id = "all" > 
+             </br>
+            </br>
+             <label> Due </label> </br>
+            <input type = "date"
+                   value = "01/01/2021"
+                   name = "date-due"
+                   id = "date-due" > 
+            </br>
+        </br>
+            <label> Available from </label> </br>
+            <input type = "date"
+                   value = "01/01/2021"
+                   name = "date-available"
+                   id = "d-available" > 
+            </br>
+        </br>
+            <label> Until </label> </br>
+            <input type = "date"
+                   value = "01/01/2021"
+                   name = "date-until"
+                   id = "d-until" > 
+                </br>
+            </br>
+            <form action="/kanbas/assignments/index.html">  
+                <button> Cancel </button>  
+                <button> Save </button> 
+            </form>
+            </td>  
+        </tr>
+    </tbody>
+</table>  -->
+
+
+
+
+
+<!-- <table border = "0" width = "100%">
+    <tbody>
+        <tr>
+            <td valign = "top">
+                <ul>
+                    <li> <a href="/kanbas/account/account.html" > Account </a></li>
+                    <li> <a href="/kanbas/account/account.html" > Dashboard </a></li>
                     <li> <a href="/kanbas/courses/courses.html" > Courses </a></li>
                     <li> <a href="#" > Calendar </a></li>
                     <li> <a href="#" > Inbox </a></li>
@@ -129,4 +525,4 @@
             </td>
         </tr>
     </tbody>
-</table>
+</table> -->

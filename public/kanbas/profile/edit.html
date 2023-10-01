@@ -1,78 +1,129 @@
-<table border = "0" width = "100%">
-    <tbody>
-        <tr>
-            <td valign = "top">
-                <ul>
-                    <li> <a href="/kanbas/account/account.html" > Account </a></li>
-                    <li> <a href="#" > Dashboard </a></li>
-                    <li> <a href="/kanbas/courses/courses.html" > Courses </a></li>
-                    <li> <a href="#" > Calendar </a></li>
-                    <li> <a href="#" > Inbox </a></li>
-                    <li> <a href="#" > History </a></li>
-                    <li> <a href="#" > Studio </a></li>
-                    <li> <a href="#" > Commons </a></li>
-                    <li> <a href="#" > Help </a></li>
-                </ul>
-             </td>
-             <td valign = "top">
-                <ul>
-                    <li> <a href="#" > Notifications </a></li>
-                    <li> <a href="/kanbas/profile/index.html" > Profile </a></li>
-                    <li> <a href="#" > Files </a></li>
-                    <li> <a href="#" > Settings </a></li>
-                    <li> <a href="#" > ePortfolios </a></li>
-                    <li> <a href="#" > Shared Content </a></li>
-                    <li> <a href="#" > The Hub </a></li>
-                    <li> <a href="#" > Qwicklu Course Tools </a></li>
-                    <li> <a href="#" > Global Announcements </a></li>
-                </ul>
-            </td>
-            <td valign = "top">
-                <h2>
-                    Jose Annunziato 
-                </h2>
-            <label> Name:* </label>
-                <input type = "text"
-                       placeholder="Jose Annunziato"
-                       id = prof-name>
-            <label> Pronouns: </label>
-            <select id = "proununs">
-                <option selected value = "NONE"> None </option>
-            </select>
-            <label> Title: </label>
-                <input type = "text"
-                       id = prof-name>
+
+<html>
+<head>
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+    <link href="edit.css"
+    rel="stylesheet"/>
+
+<head>
+<body>
+    <div class = "row">
+        <div class = "col-1">
+    <div class="list-group">
+        <img class = "list-group-item list-group-item-action"
+                src="/images/NortheasternLogo.png"/> 
+        <div class="list-group-item list-group-item-action list-group-item active">
+            <a href= "/kanbas/account/account.html" class="list-group-item-action">
+            <i class= "fa fa-user fa-2x" style="color: gray;"></i> </br> Account </a>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <a href="/kanbas/dashboard/dashboard.html" class="list-group-item-action"> 
+            <i class="fa fa-tachometer-alt fa-2x" style="color: #ff0000;"></i> Dashboard</a>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <a href="/kanbas/courses/courses.html" class="list-group-item-action">
+            <i class="fa fa-book fa-2x" style="color: #ff0000;"></i> Courses</a>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action"> 
+            <i class="fa fa-calendar-alt fa-2x" style="color: #ff0000;"></i>
+            Calendar</a>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action"> 
+            <i class="fa fa-envelope-open-text fa-2x" style="color: #ff0000;"></i>Inbox</a>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action">
+            <i class="fa fa-clock fa-2x" style="color: #ff0000;"></i>History
+            </a>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action">
+            <i class="fa fa-tv fa-2x" style="color: #ff0000;"></i>Studio</a>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action"> 
+            <i class="fa fa-arrow-circle-right fa-2x" style="color: #ff0000;"></i>Commons</a>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item-action">
+            <i class="fa fa-question-circle fa-2x" style="color: #ff0000;"></i> </br> Help</a>
+        </div>
+        </div>
+      </div>
+
+      <div class ="col-md account"> 
+        <div class="list-group-account">
+            <li class = "list-group-item-action-account list-group-item-account account"><a href= "#"> Notifications </a></li>
+            <li class = "list-group-item-action-account list-group-item-account account active"><a href="/kanbas/profile/index.html"> Profile</a></li>
+            <li class = "list-group-item-action-account list-group-item-account account"><a href="#"> Files</a></li>
+            <li class = "list-group-item-action-account list-group-item-account account"><a href="#"> Settings</a></li>
+            <li class = "list-group-item-action-account list-group-item-account account"><a href="#"> ePortfolios</a></li>
+            <li class = "list-group-item-action-account list-group-item-account account"><a href="#">Shared Content </a></li>
+            <li class = "list-group-item-action-account list-group-item-account account"><a href="#"> The Hub </a></li>
+            <li class = "list-group-item-action-account list-group-item-account account"><a href="#"> Qwickly Course Tools</a></li>
+            <li class = "list-group-item-action-account list-group-item-account account"><a href="#"> Global Announcements</a></li>
+        </div>
+
+        <div class ="col-md"> 
+            <div class = "list-group-profile">
+                <i class="fa fa-user fa-8x" style="color: gray" aria-hidden="true"></i> </br>
+                <label for="name-input" style = "font-size:large;" class="form-label">Name:*</label>
+                <input type="text" class="form-control" id="name" placeholder="Arunima Gupta"></br>
+                <label for="pronouns-select" style = "font-size:large;" class="form-label">Pronouns:</label>
+                <select class="form-select">
+                    <option selected>None</option>
+                </select></br>
             <h3> Contact </h3>
             <p> No registered services, you can add some on the <a href="#"> settings</a> page.</p>
+            <br> 
             <h3> Biography </h3>
-            <p> Faculty, Software Engineer, AI, Space, and renewables enthusiast. </p>
             <form id="textarea">
-                <textarea cols="60" rows="10">Faculty, Software Engineer, AI, Space, and renewables enthusiast. 
+                <textarea class="form-control" id="bioTextArea" rows="5">CS & Cognitive Psych Student, Bollywood Dancer, Singer, and Educational Reformist. 
                 </textarea>
             </form>
+        </br>
             <h3> Links </h3>
-            <ul> 
-                <li> <a href="#"> YouTube </a></li>
-            </ul>
-            <h4> Title URL</h4>  
-            <input type = "text"
-                    id = link-name>
-            ->
-            <input type = "url"
-                    id = link> 
-            <a href="#"> Remove </a>
-            </br>
-            <button> Add another link</button>
-            </br>
-                <button> Cancel</button>
-                <form action="/kanbas/profile/index.html">
-                    <button> Save Profile</button>
-                </form>
-                <button> Edit Profile </button>
-                <form action="/kanbas/profile/index.html">
-                    <button> Cancel Editing </button>
-                </form>
-            </td>
-        </tr>
-    </tbody>
-</table>
+            <div class="row">
+                <div class="col">
+                  <h6 style="text-align: center;"> Title</h6>
+                </div>
+                <div class="col">
+                    <h6 style="text-align: center;">URL</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" id="link-name" placeholder="YouTube">
+                </div>
+                <div class="col">
+                    <input type="url" class="form-control" id="link-url" placeholder="https://www.youtube.com/@WebDevTV">
+                </div>
+            </div>
+        </br>
+                <button type="button" style ="width: 200px; height: 40px;"class="btn btn-secondary">Add another link</button>
+    </br>
+    </br>
+    <div class = "row">
+    <div class = "col" style= "justify-content: right;">
+                <a href="/kanbas/profile/index.html"><button type="button" style ="width: 150px; height: 40px;"class="btn btn-secondary">Cancel</button></a>
+     </div>
+     <div class = "col" style= "justify-content: right;">
+                <a href="/kanbas/profile/index.html"><button type="button" style ="width: 150px; height: 40px;"class="btn btn-danger">Save Profile</button></a>
+    </div>
+    </div>
+    </div>
+    
+            </div>
+
+            <div class ="col-md"> 
+            <div class = "float-end">
+                <a href="/kanbas/profile/index.html"> <button> <i class="fas fa-pencil-alt" style="color: #525252;"></i> Cancel Editing</button> </a>
+            </div>
+          </div>
+
+      </div>
+
+
