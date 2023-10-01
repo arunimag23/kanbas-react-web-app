@@ -1,0 +1,110 @@
+.list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    font-size: 14px;
+  }
+
+.list-group-account{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-bottom: 10px;
+    border-radius: 0;
+    font-size: 14px;
+    padding-top: 80px;
+    position: absolute;
+    width: 200 px;
+    left: 100px;
+    list-style-type: none;
+
+}
+
+
+
+  .account a{
+    width: 200 px;
+    left: 95px;
+    color: red; 
+    text-decoration: none;
+  }
+
+
+  
+  .list-group-item {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0.6rem 0.6rem;
+    color: white;
+    text-decoration: none;
+    background-color:black;
+    border: 0;
+  }
+  
+  .list-group-item-account{
+    position: relative;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    padding: 0.6rem 0.6rem;
+    color: white;
+    text-decoration: none;
+    background-color:white;
+    border: 0;
+    width: 200px;
+  }
+  
+
+  .list-group-item-action {
+    width: 80px;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+
+  .list-group-item-action a{
+    width: 80px;
+    color: red;
+    text-decoration: none;
+    justify-content: center;
+  }
+  
+  .list-group-item-action:hover{
+    background-color: white;
+    color: red;
+  
+  }
+
+  .list-group-item-action-account {
+    width: 120px;
+    color: white;
+    text-decoration: none;
+    justify-content: left;
+
+  }
+
+  .list-group-item-action-account:hover a{
+    background-color: white;
+    color: black;
+    border-left: 3px solid black;
+    padding: 8px;
+  }
+
+
+
+.list-group-item.active{
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    background-color:white;
+}
+
+.col-1{
+  margin-right: 20px;
+}
