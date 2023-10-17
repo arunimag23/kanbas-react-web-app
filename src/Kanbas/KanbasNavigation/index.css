@@ -1,0 +1,89 @@
+.kanbas-navigation-list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  font-size: 14px;
+  
+}
+
+.northeastern-logo{
+  padding-top: 5px;
+  width: 10px;
+  height: 1.0;
+}
+
+.kanbas-navigation-icon {
+  margin-right: 5px;
+  color: red;
+  font-size: xx-large;
+  justify-content: center;
+}
+
+.kanbas-navigation-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* .list-group-item {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0.6rem 0.6rem;
+  color: white;
+  text-decoration: none;
+  background-color:black;
+  border: 0;
+} */
+
+.kanbas-navigation-list-group .list-group-item.active {
+  background-color: white !important;
+  border-color: transparent !important;
+  border: none !important;
+  color: red !important;
+}
+
+
+.menu-item-text {
+  transition: none;
+  position: static;
+  left: auto;
+  top: auto;
+  transform: none;
+  opacity: 1;
+  text-align: center;
+  display: block;
+  line-height: 1.0;
+  border-radius: 0;
+  color: white !important;
+  background-color: black !important;
+  white-space: normal;
+  font-size: 0.875rem;
+  font: arial;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.custom-icon-image {
+  width: 10px; 
+  height: 10px; 
+  /* border-radius: 50%; Optional: For a circular shape */
+}
+
+
+.list-group-item-action {
+  border-radius: 0% !important;
+  border: 0 !important;
+  color: red;
+  text-decoration: none;
+  text-align: center !important;
+}
+
+.list-group-item-action:hover{
+  background-color: white !important;
+  color: red !important;
+
+} 
