@@ -1,0 +1,21 @@
+.list-group-modules {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    border-radius: 0;
+    font-size: 14px;
+    width: 100%;
+    /* left: 250px; */
+  }
+  
+  
+  
+  .list-group-item-module {
+    margin-bottom: 20px;
+    padding: 0.5rem 0.5rem;
+    height: 75px;
+    text-decoration: none;
+    background-color: lightgray;
+    border: 1px solid rgba(0, 0, 0, .125);
+  }
