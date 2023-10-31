@@ -7,12 +7,13 @@ import Modules from './Modules';
 import Home from './Home';
 import Assignments from './Assignments';
 import AssignmentEditor from './Assignments/AssignmentEditor';
+import NewAssignmentEditor from './Assignments/NewAssignmentEditor';
 import Grades from './Grades';
 
-function Courses() {
+function Courses({ courses }) {
   const location = useLocation();
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const lastPathSegment = location.pathname.split('/').pop();
 
   return (
@@ -95,6 +96,7 @@ function Courses() {
           <Route path="Modules" element={<Modules />} />
           <Route path="Assignments" element={<Assignments />} />
           <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
+          <Route path="NewAssignmentEditor" element={<NewAssignmentEditor />} />
           <Route path="Grades" element={<Grades/>} />
         </Routes>
       </div>

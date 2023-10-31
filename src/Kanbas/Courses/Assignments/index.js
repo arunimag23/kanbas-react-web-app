@@ -2,14 +2,23 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import {BiDotsVerticalRounded} from "react-icons/bi"
+import { useSelector, useDispatch } from "react-redux";
+import NewAssignmentEditor from "./NewAssignmentEditor";
 import "../Assignments/assignments.css"
+import {
+  selectAssignment, // Import the selectAssignment action
+} from "./assignmentsReducer";
 
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const dispatch = useDispatch();
+
+  const handleAssignmentClick = (assignment) => {
+    // Use the selectAssignment action to set/select the assignment
+    dispatch(selectAssignment(assignment));
+  };
   return (
     <div>
       <div className="row">
@@ -21,7 +30,11 @@ function Assignments() {
       <div className="col-4">
       <ul class="nav nav-tabs">
                         <button type="button" class="btn btn-light">Group</button>
-                        <button type="button" class="btn btn-danger">Assignment</button>
+                        <Link to={`/Kanbas/Courses/${courseId}/NewAssignmentEditor`}>
+                        <button type="button" className="btn btn-danger">
+                          Assignment
+                        </button>
+                        </Link>
                         <button type ="button" class ="btn btn-light"><BiDotsVerticalRounded /></button>
       </ul>
       </div>
@@ -36,14 +49,18 @@ function Assignments() {
         <div className="list-group-item-secondary">
           <h6>ASSIGNMENTS</h6>
         </div>
-        {courseAssignments.map((assignment) => (
-          <Link
-            key={assignment._id}
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item-assignment">
-            {assignment.title}
-          </Link>
-        ))}
+         {assignments
+            .filter((assignment) => assignment.course === courseId)
+            .map((assignment) => (
+              <Link
+                key={assignment._id}
+                to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                className="list-group-item-assignment"
+                onClick={() => handleAssignmentClick(assignment)} // Handle assignment click
+              >
+                {assignment.title}
+              </Link>
+            ))}
       </div>
       </div>
     </div>
