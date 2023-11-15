@@ -5,18 +5,28 @@ import {BiDotsVerticalRounded} from "react-icons/bi"
 import { useSelector, useDispatch } from "react-redux";
 import NewAssignmentEditor from "./NewAssignmentEditor";
 import "../Assignments/assignments.css"
+import { useEffect } from "react";
 import {
-  selectAssignment, // Import the selectAssignment action
+  setAssignments,
+  selectAssignment
 } from "./assignmentsReducer";
+import { findAssignmentsForCourse } from "./client";
 
 
 function Assignments() {
   const { courseId } = useParams();
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+    );
+  }, [courseId]);
+
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const dispatch = useDispatch();
 
   const handleAssignmentClick = (assignment) => {
-    // Use the selectAssignment action to set/select the assignment
+
     dispatch(selectAssignment(assignment));
   };
   return (

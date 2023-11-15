@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { addAssignment } from "../assignmentsReducer"; // Import actions
+import {createAssignment} from "../client"; 
 import { useDispatch } from "react-redux";
 
 
@@ -17,9 +18,13 @@ function NewAssignmentEditor() {
     availableUntilDate: "",
   });
 
+
   const handleSave = () => {
 
-    dispatch(addAssignment(assignment));
+    createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+
 
     // After saving, navigate back to the Assignments screen.
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);

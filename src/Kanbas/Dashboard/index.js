@@ -31,8 +31,9 @@ function Dashboard(
             <button type="button" className="btn btn-success" onClick={addNewCourse} style = {{marginBottom: "20px", marginRight:"10px"}}>
             Add
             </button>
-            <button type="button" className="btn btn-light" onClick={updateCourse} style = {{marginBottom: "20px"}}>
-               Update
+            <button className="btn btn-light" onClick={(event) => {event.preventDefault();
+                                              updateCourse(course)}} style = {{marginBottom: "20px"}}>
+            Update
             </button>
 
 
@@ -59,7 +60,7 @@ function Dashboard(
               <button type="button" className="btn btn-danger"
                 onClick={(event) => {
                 event.preventDefault();
-                deleteCourse(course._id);
+                deleteCourse(course);
                 }}>
                 Delete
               </button>

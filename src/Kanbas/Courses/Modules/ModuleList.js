@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -6,11 +6,41 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules
 } from "./modulesReducer";
 import "./ModuleList.css";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client"
 
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
@@ -24,9 +54,9 @@ function ModuleList() {
             dispatch(setModule({ ...module, name: e.target.value }))
           }
         />
-        <button type="button" className="btn btn-light" style={{marginRight:"10px", marginBottom:"10px"}} onClick={() => dispatch(updateModule(module))}>Update</button>
+        <button type="button" className="btn btn-light" style={{marginRight:"10px", marginBottom:"10px"}} onClick={handleUpdateModule}>Update</button>
         <button type="button" className="btn btn-success" style={{marginBottom:"10px"}}
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+          onClick={handleAddModule}
         >
           Add
         </button>
@@ -43,7 +73,7 @@ function ModuleList() {
         .map((module, index) => (
           <li key={index} className="list-group-item-module">
             <button style = {{marginLeft:"10px"}} type="button" className="btn btn-light float-end" onClick={() => dispatch(setModule(module))}>Edit</button>
-            <button className="btn btn-danger float-end" onClick={() => dispatch(deleteModule(module._id))}>
+            <button className="btn btn-danger float-end" onClick={() => handleDeleteModule(module._id)}>
               Delete
             </button>
             <h4>{module.name}</h4>

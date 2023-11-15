@@ -3,6 +3,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import { updateAssignment } from "../assignmentsReducer";
 import { useDispatch } from "react-redux";
+import * as client from "../client";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
@@ -17,11 +18,12 @@ function AssignmentEditor() {
   const { courseId } = useParams();
   const navigate = useNavigate();
 
-  const handleSave = () => {
-    // Dispatch the `updateAssignment` action to update the assignment
-    dispatch(updateAssignment({...assignment,title}));
+  const handleSave = async () => {
+    const updatedAssignment = { ...assignment, title: title };
+    await client.updateAssignment(updatedAssignment);
+    dispatch(updateAssignment(updatedAssignment));
 
-    // After saving, navigate back to the Assignments screen
+    // Navigate back to the Assignments screen
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
 
