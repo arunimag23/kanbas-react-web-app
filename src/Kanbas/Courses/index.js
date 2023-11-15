@@ -9,12 +9,27 @@ import Assignments from './Assignments';
 import AssignmentEditor from './Assignments/AssignmentEditor';
 import NewAssignmentEditor from './Assignments/NewAssignmentEditor';
 import Grades from './Grades';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({ courses }) {
+function Courses({  }) {
   const location = useLocation();
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const URL = "http://localhost:4000/api/courses";
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  // const course = courses.find((course) => course._id === courseId);
   const lastPathSegment = location.pathname.split('/').pop();
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
 
   return (
     <div className="col-12 container-fluid">
